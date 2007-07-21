@@ -1,12 +1,13 @@
 %define name	gnet2
 %define	version	2.0.7
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 %define api_version 2.0
 %define major 0
 %define libname %mklibname gnet-%{api_version}_ %{major}
+%define develname %mklibname gnet-%{api_version} -d
 
-Summary:	Libgnet, a network library
+Summary:	A network library
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
@@ -42,14 +43,15 @@ and built upon glib.  It is intended to be small, fast, easy-to-use,
 and easy to port.  The interface is similar to the interface for
 Java's network library.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Header files for the Gnet library
 Group:		Development/C
 Provides:	lib%{name}-devel = %{version}-%{release}
 Provides:	libgnet-%{api_version}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
+Obsoletes:	%{mklibname gnet-%{api_version}_ 0 -d}
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 Gnet is a simple network library.  It is writen in C, object-oriented,
 and built upon glib.
 This package allows you to develop applications that use the Gnet
@@ -87,7 +89,7 @@ rm -fr %{buildroot}%{_datadir}/gtk-doc/
 %defattr(-, root, root)
 %{_libdir}/*.so.*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-, root, root)
 %doc README COPYING ChangeLog NEWS TODO AUTHORS INSTALL HACKING doc/html
 %{_includedir}/gnet-2.0
