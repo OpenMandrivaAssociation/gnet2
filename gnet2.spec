@@ -16,6 +16,7 @@ License:	LGPL
 Source0:	gnet-%{version}.tar.bz2
 Group:		System/Libraries
 BuildRequires:	glib2-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Gnet is a simple network library.  It is writen in C, object-oriented,
