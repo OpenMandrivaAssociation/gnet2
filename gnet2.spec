@@ -1,6 +1,6 @@
 %define name	gnet2
 %define	version	2.0.8
-%define	release	%mkrel 5
+%define	release	%mkrel 6
 
 %define api_version 2.0
 %define major 0
