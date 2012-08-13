@@ -1,6 +1,6 @@
 %define name	gnet2
 %define	version	2.0.8
-%define	release	%mkrel 7
+%define	release	%mkrel 8
 
 %define api_version 2.0
 %define major 0
@@ -11,7 +11,7 @@ Summary:	A network library
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-URL:		http://www.gnetlibrary.org
+URL:		https://live.gnome.org/GNetLibrary/
 License:	LGPL
 Source0:	gnet-%{version}.tar.bz2
 Group:		System/Libraries
