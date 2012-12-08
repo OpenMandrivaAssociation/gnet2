@@ -1,0 +1,31 @@
+diff -urN gnet-2.0.8/configure.ac gnet-2.0.8-patched/configure.ac
+--- gnet-2.0.8/configure.ac	2008-02-03 22:04:42.000000000 +1000
++++ gnet-2.0.8-patched/configure.ac	2012-09-04 23:58:31.342421001 +1100
+@@ -614,8 +614,6 @@
+ AC_CONFIG_FILES([
+ 	Makefile
+ 	src/Makefile
+-	examples/Makefile
+-	examples/xmlrpc/Makefile
+ 	macros/Makefile
+ 	tests/Makefile
+ 	tests/check/Makefile
+diff -urN gnet-2.0.8/Makefile.am gnet-2.0.8-patched/Makefile.am
+--- gnet-2.0.8/Makefile.am	2008-02-03 22:04:42.000000000 +1000
++++ gnet-2.0.8-patched/Makefile.am	2012-09-04 23:59:04.665421001 +1100
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS = src examples macros tests doc 
++SUBDIRS = src macros tests doc 
+ 
+ @SET_MAKE@
+ 
+@@ -16,7 +16,6 @@
+ 	gnet.def  				\
+ 	gnet.spec  				\
+ 	gnet.spec.in 				\
+-	examples/makefile.mingw 		\
+ 	src/makefile.mingw 			\
+ 	src/gnet-private.h  			\
+ 	src/socks-private.h 			\
