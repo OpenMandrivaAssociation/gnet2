@@ -12,6 +12,7 @@ License:	LGPL
 URL:		http://www.gnetlibrary.org
 Source0:	gnet-%{version}.tar.bz2
 Patch0:		gnet-2.0.8-examples.patch
+Patch1:		gnet-2.0.8-automake113.patch
 BuildRequires:	pkgconfig(glib-2.0)
 
 %description
@@ -55,6 +56,7 @@ library.
 %prep
 %setup -q -n gnet-%{version}
 %patch0 -p1
+%patch1 -p1
 chmod 755 doc/html
 
 %build

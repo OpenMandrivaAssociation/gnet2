@@ -1,0 +1,10 @@
+--- gnet-2.0.8/configure.ac.orig	2013-04-13 14:41:24.214810844 +0100
++++ gnet-2.0.8/configure.ac	2013-04-13 14:41:28.192810612 +0100
+@@ -127,7 +127,6 @@
+ ###############################
+ # Check for programs
+ AC_PROG_CC
+-AM_PROG_CC_STDC
+ AC_PROG_INSTALL
+ AC_PROG_MAKE_SET
+ AC_LIBTOOL_WIN32_DLL
