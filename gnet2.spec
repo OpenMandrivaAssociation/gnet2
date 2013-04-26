@@ -1,10 +1,11 @@
+# MD TODO !!!! rename src directory to just gnet !!!!
 %define api	2.0
 %define major	0
-%define libname %mklibname gnet %{api} %{major}
-%define devname %mklibname gnet %{api} -d
+%define libname %mklibname %{name} %{api} %{major}
+%define devname %mklibname %{name} -d
 
 Summary:	A network library
-Name:		gnet2
+Name:		gnet
 Version:	2.0.8
 Release:	11
 Group:		System/Libraries
@@ -43,7 +44,7 @@ Java's network library.
 %package -n	%{devname}
 Summary:	Header files for the Gnet library
 Group:		Development/C
-Provides:	gnet-devel = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 Obsoletes:	%{_lib}gnet-2.0-devel < 2.0.8-11
 
@@ -52,7 +53,7 @@ This package allows you to develop applications that use the Gnet
 library.
 
 %prep
-%setup -qn gnet-%{version}
+%setup -q
 %apply_patches
 chmod 755 doc/html
 
@@ -70,13 +71,13 @@ export CFLAGS="%{optflags} -fPIC"
 
 #remove unpackaged files
 rm -rf %{buildroot}%{_datadir}/doc/libgnet%{api}-dev
-rm -fr %{buildroot}%{_datadir}/gtk-doc/
 
 %files -n %{libname}
 %{_libdir}/libgnet-%{api}.so.%{major}*
 
 %files -n %{devname}
 %doc README COPYING ChangeLog NEWS TODO AUTHORS INSTALL HACKING doc/html
+%doc %{_datadir}/gtk-doc/
 %{_includedir}/gnet-%{api}
 %{_datadir}/aclocal/*
 %{_libdir}/gnet-%{api}
