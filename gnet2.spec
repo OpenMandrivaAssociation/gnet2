@@ -7,7 +7,7 @@
 Summary:	A network library
 Name:		gnet
 Version:	2.0.8
-Release:	17
+Release:	18
 Group:		System/Libraries
 License:	LGPL
 Url:		http://www.gnetlibrary.org
