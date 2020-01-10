@@ -54,7 +54,7 @@ library.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 chmod 755 doc/html
 
 autoreconf -fi
