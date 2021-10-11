@@ -7,7 +7,7 @@
 Summary:	A network library
 Name:		gnet
 Version:	2.0.8
-Release:	20
+Release:	21
 Group:		System/Libraries
 License:	LGPL
 Url:		http://www.gnetlibrary.org
@@ -15,6 +15,7 @@ Source0:	gnet-%{version}.tar.bz2
 Patch0:		gnet-2.0.8-examples.patch
 Patch1:		gnet-2.0.8-automake113.patch
 BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	gtk-doc
 
 %description
 Gnet is a simple network library.  It is writen in C, object-oriented,
